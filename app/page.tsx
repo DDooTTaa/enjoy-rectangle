@@ -3,11 +3,10 @@ export default function Home() {
     <div className="space-y-8">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Enjoy Rectangle에 오신 것을 환영합니다!
+          Enjoy Rectangle
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          React와 Next.js로 구축된 현대적인 웹 애플리케이션입니다.
-          TypeScript와 Tailwind CSS를 사용하여 개발되었습니다.
+          당신의 공간 능력을 성장시켜 보던가 말던가!
         </p>
       </div>
 
