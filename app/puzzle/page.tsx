@@ -191,18 +191,11 @@ export default function PuzzlePage() {
             <div className="flex justify-center items-center space-x-8">
               <Grid4x4 
                 grid={currentGrid}
-                label="전"
+                label=""
                 rotation={currentRotation}
                 isFlippedHorizontal={isFlippedHorizontal}
                 isFlippedVertical={isFlippedVertical}
                 onCellClick={toggleCell}
-              />
-              <div className="text-4xl text-green-500">→</div>
-              <Grid4x4 
-                grid={targetGrid}
-                isTarget={true}
-                label="후"
-                rotation={0}
               />
             </div>
           </div>
