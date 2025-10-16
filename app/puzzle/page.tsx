@@ -60,9 +60,29 @@ export default function PuzzlePage() {
     
     // 모든 동작은 시각적 효과만 (데이터는 변경하지 않음)
     if (operation === '왼쪽 45° 회전') {
-      setCurrentRotation(prev => prev - 45)
+      // 반전 상태에 따라 회전 방향 조정
+      if (isFlippedHorizontal && isFlippedVertical) {
+        // 둘 다 반전된 경우: 회전 방향 유지
+        setCurrentRotation(prev => prev - 45)
+      } else if (isFlippedHorizontal || isFlippedVertical) {
+        // 하나만 반전된 경우: 회전 방향 반대
+        setCurrentRotation(prev => prev + 45)
+      } else {
+        // 반전 없는 경우: 정상 회전
+        setCurrentRotation(prev => prev - 45)
+      }
     } else if (operation === '오른쪽 45° 회전') {
-      setCurrentRotation(prev => prev + 45)
+      // 반전 상태에 따라 회전 방향 조정
+      if (isFlippedHorizontal && isFlippedVertical) {
+        // 둘 다 반전된 경우: 회전 방향 유지
+        setCurrentRotation(prev => prev + 45)
+      } else if (isFlippedHorizontal || isFlippedVertical) {
+        // 하나만 반전된 경우: 회전 방향 반대
+        setCurrentRotation(prev => prev - 45)
+      } else {
+        // 반전 없는 경우: 정상 회전
+        setCurrentRotation(prev => prev + 45)
+      }
     } else if (operation === '좌우반전') {
       setIsFlippedHorizontal(prev => !prev)
     } else if (operation === '상하반전') {
@@ -99,10 +119,24 @@ export default function PuzzlePage() {
     } else {
       switch (lastMove) {
         case '왼쪽 45° 회전':
-          setCurrentRotation(prev => prev + 45)
+          // 반전 상태에 따라 회전 방향 조정 (되돌리기)
+          if (isFlippedHorizontal && isFlippedVertical) {
+            setCurrentRotation(prev => prev + 45)
+          } else if (isFlippedHorizontal || isFlippedVertical) {
+            setCurrentRotation(prev => prev - 45)
+          } else {
+            setCurrentRotation(prev => prev + 45)
+          }
           break
         case '오른쪽 45° 회전':
-          setCurrentRotation(prev => prev - 45)
+          // 반전 상태에 따라 회전 방향 조정 (되돌리기)
+          if (isFlippedHorizontal && isFlippedVertical) {
+            setCurrentRotation(prev => prev - 45)
+          } else if (isFlippedHorizontal || isFlippedVertical) {
+            setCurrentRotation(prev => prev + 45)
+          } else {
+            setCurrentRotation(prev => prev - 45)
+          }
           break
         case '좌우반전':
           setIsFlippedHorizontal(prev => !prev)
