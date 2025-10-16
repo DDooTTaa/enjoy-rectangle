@@ -208,9 +208,6 @@ export default function PuzzlePage() {
             💡 팁: 그리드의 셀을 클릭하면 색을 칠하거나 지울 수 있습니다
           </p>
           <div className="mt-4 flex justify-center items-center space-x-4">
-            <div className="text-lg font-semibold text-blue-600">
-              남은 클릭 횟수: {remainingMoves}
-            </div>
             {isSolved && (
               <div className="text-lg font-bold text-green-600">
                 🎉 완료!
