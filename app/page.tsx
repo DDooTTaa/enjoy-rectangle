@@ -6,7 +6,7 @@ export default function Home() {
           Enjoy Rectangle
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          당신의 공간 능력을 성장시켜 보던가 말던가!
+          당신의 공간 능력을 성장시켜 보세요! (역량 검사 연습용으로 만들어 보았습니다.)
         </p>
       </div>
 
