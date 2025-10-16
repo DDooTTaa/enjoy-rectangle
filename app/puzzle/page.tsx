@@ -199,13 +199,13 @@ export default function PuzzlePage() {
         {/* 헤더 */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            4x4 퍼즐 게임
+            4x4 회전 퍼즐
           </h1>
           <p className="text-gray-600">
-            빈 그리드에서 시작해서 오른쪽 패턴과 같게 만들어보세요!
+            빈 그리드에 색을 칠하고 뒤집고 회전해 보세요!
           </p>
           <p className="text-sm text-gray-500 mt-2">
-            💡 팁: 왼쪽 그리드의 셀을 클릭하면 색을 칠하거나 지울 수 있습니다
+            💡 팁: 그리드의 셀을 클릭하면 색을 칠하거나 지울 수 있습니다
           </p>
           <div className="mt-4 flex justify-center items-center space-x-4">
             <div className="text-lg font-semibold text-blue-600">
