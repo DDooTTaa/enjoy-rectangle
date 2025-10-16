@@ -260,12 +260,6 @@ export default function PuzzlePage() {
               </h3>
               
               <div className="space-y-4">
-                <button
-                  onClick={toggleHint}
-                  className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
-                >
-                  {showHint ? '힌트 숨기기' : '최적해 힌트 보기'}
-                </button>
                 
                 {showHint && optimalSolution.length > 0 && (
                   <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
