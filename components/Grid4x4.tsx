@@ -17,7 +17,7 @@ export default function Grid4x4({ grid, onCellClick, isTarget = false, label, ro
   return (
     <div className="flex flex-col items-center">
       <div 
-        className={`grid grid-cols-4 gap-1 p-4 ${isTarget ? 'bg-green-50 border-2 border-green-200' : 'bg-white border border-gray-200'} rounded-lg transition-transform duration-300`}
+        className={`grid grid-cols-4 gap-2 p-6 ${isTarget ? 'bg-green-50 border-2 border-green-200' : 'bg-white border border-gray-200'} rounded-xl shadow-lg transition-transform duration-300`}
         style={{ transform: transformStyle }}
       >
         {grid.map((row, rowIndex) =>
@@ -25,7 +25,7 @@ export default function Grid4x4({ grid, onCellClick, isTarget = false, label, ro
             <button
               key={`${rowIndex}-${colIndex}`}
               onClick={() => onCellClick?.(rowIndex, colIndex)}
-              className={`w-12 h-12 border border-gray-300 transition-colors ${
+              className={`w-16 h-16 border border-gray-300 transition-colors ${
                 cell ? 'bg-gray-600' : 'bg-white'
               } hover:bg-opacity-80`}
             />
